@@ -1,10 +1,8 @@
 module ISRLutils
 
-# ------------------------------------------------------------
-# This file contains functions which general utility functions
-# needed for other packages.
-#
-# ------------------------------------------------------------
+# -----------------------------------------------------------------------------------
+# This file contains functions which are needed by other packages developed at ISRLab
+# -----------------------------------------------------------------------------------
 
 # Convert linear index to multi-dimensional index
 # ===============================================
@@ -26,7 +24,7 @@ end
 
 # Generate ND grid
 # ================
-function UniformNDGrid(lb,ub,N)
+function GenerateNDGrid(lb,ub,N)
     d = length(N);
     g = [range(lb[i],ub[i],length=N[i]) for i in 1:d];
     nmax = prod(N);
@@ -64,7 +62,5 @@ function cornerPoints(x1,x2)
 	end
 	return vcat(p...);
 end
-
-
 
 end # module
