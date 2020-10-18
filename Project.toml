@@ -1,0 +1,4 @@
+name = "ISRLutils"
+uuid = "d8f3d6d2-aa91-4436-b546-01264c34ff45"
+authors = ["Intelligent Systems Research Laboratory <raktim@tamu.edu>"]
+version = "0.1.0"
