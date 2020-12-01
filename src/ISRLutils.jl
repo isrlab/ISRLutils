@@ -24,6 +24,11 @@ end
 
 # Generate ND grid
 # ================
+```
+G = GenerateNDGrid(lb,ub,N)
+lb, ub, N are d-dimensional vectors specifying the limits and number of points along each dimension.
+G is d x prod(N) matrix with grid points.
+```
 function GenerateNDGrid(lb,ub,N)
     d = length(N);
     g = [range(lb[i],ub[i],length=N[i]) for i in 1:d];
