@@ -38,14 +38,12 @@ function GenerateNDGrid(lb,ub,N)
 
     g = [range(lb[i],ub[i],length=N[i]) for i in 1:d];
     nmax = prod(N);
-    # G = zeros(d,nmax);
-    G = [];
+    G = zeros(d,nmax);
 
     for i in 1:nmax
         ii = sub2ind(i,N);
         for j = 1:d
-            # G[j,i] = g[j][ii[j]];
-            push!(G,g[j][ii[j]]);
+            G[j,i] = g[j][ii[j]];
         end
     end
     return G
