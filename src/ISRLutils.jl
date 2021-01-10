@@ -32,7 +32,7 @@ G is d x prod(N) matrix with grid points.
 function GenerateNDGrid(lb,ub,N)
     d = length(N);
 
-    if length(N) ~= length(lb) || length(N) ~= length(ub) || length(lb) ~= length(ub)
+    if length(N) != length(lb) || length(N) != length(ub) || length(lb) != length(ub)
         error("Dimension mismatch.")
     end
 
